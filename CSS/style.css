@@ -1,0 +1,749 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+:root {
+    --color-text: #18181B;
+    --color-accent: #FF751F;
+    --color-background: #F5F5F5;
+
+    --content-width: 1400px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+    max-width: var(--content-width);
+
+    min-height: 100px;
+
+    margin: 0 auto;
+    padding: 40px 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGOTIPO
+   ========================================================= */
+
+.site-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.logo-main {
+    display: block;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    letter-spacing: 0.151em;
+
+    color: var(--color-text);
+}
+
+.logo-sub {
+    display: block;
+
+    width: 100%;
+
+    margin-top: -8px;
+
+    text-align: center;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.8;
+    letter-spacing: 0.151em;
+
+    color: var(--color-accent);
+}
+
+
+/* =========================================================
+   MENÚ PRINCIPAL
+   ========================================================= */
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item > a {
+    display: block;
+
+    padding: 10px 0;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    letter-spacing: 0.09em;
+
+    color: var(--color-text);
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.menu-item > a:hover {
+    color: var(--color-accent);
+}
+
+
+/* =========================================================
+   SUBMENÚ
+   ========================================================= */
+
+.submenu {
+    position: absolute;
+
+    top: calc(100% + 5px);
+    left: 0;
+
+    min-width: 260px;
+
+    margin: 0;
+    padding: 14px 0 18px;
+
+    list-style: none;
+
+    background-color: var(--color-background);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transform: translateY(-5px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 1000;
+}
+
+.menu-item:hover > .submenu,
+.menu-item:focus-within > .submenu {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.submenu li {
+    margin: 0;
+    padding: 0;
+}
+
+.submenu a {
+    display: block;
+
+    padding: 6px 0;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    letter-spacing: 0.09em;
+
+    color: var(--color-text);
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.submenu a:hover {
+    color: var(--color-accent);
+}
+
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
+
+.home-main {
+    width: 100%;
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+
+    padding: 40px 5vw 100px;
+}
+
+.constellation {
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================================================
+   SVG DE LA CONSTELACIÓN
+   ========================================================= */
+
+.constellation-placeholder {
+    position: relative;
+
+    width: min(70vw, 900px);
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto;
+}
+
+.constellation-svg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+
+/* =========================================================
+   ESTRELLAS
+   Posiciones calculadas directamente a partir del
+   viewBox 0 0 317.5 317.5 del Logo_v2.svg
+   ========================================================= */
+
+.constellation-star {
+    position: absolute;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    text-decoration: none;
+
+    z-index: 10;
+}
+
+
+/* 01 — elemento naranja del SVG */
+.star-01 {
+    top: 16.30000%;
+    left: 37%;
+}
+
+
+/* 02 */
+.star-02 {
+    top: 4.27416%;
+    left: 22.06558%;
+}
+
+
+/* 03 */
+.star-03 {
+    top: 5.01291%;
+    left: 81.20967%;
+}
+
+
+/* 04 */
+.star-04 {
+    top: 3.17850%;
+    left: 67.42325%;
+}
+
+
+/* 05 */
+.star-05 {
+    top: 12.90207%;
+    left: 70.67758%;
+}
+
+
+/* 06 */
+.star-06 {
+    top: 37.35474%;
+    left: 87.75250%;
+}
+
+
+/* 07 */
+.star-07 {
+    top: 63.94516%;
+    left: 28.58867%;
+}
+
+
+/* 08 */
+.star-08 {
+    top: 68.32366%;
+    left: 48.15392%;
+}
+
+
+/* 09 */
+.star-09 {
+    top: 52.92008%;
+    left: 91.05142%;
+}
+
+
+/* 10 */
+.star-10 {
+    top: 26.82650%;
+    left: 87.95492%;
+}
+
+
+/* 11 */
+.star-11 {
+    top: 52.63983%;
+    left: 19.36000%;
+}
+
+
+/* 12 */
+.star-12 {
+    top: 75.87758%;
+    left: 22.80983%;
+}
+
+
+/* 13 */
+.star-13 {
+    top: 77.75124%;
+    left: 76.43667%;
+}
+
+
+/* 14 */
+.star-14 {
+    top: 26.47667%;
+    left: 8.67717%;
+}
+
+
+/* 15 */
+.star-15 {
+    top: 31.44158%;
+    left: 78.15750%;
+}
+
+
+/* 16 */
+.star-16 {
+    top: 68.84542%;
+    left: 37.43433%;
+}
+
+
+/* 17 */
+.star-17 {
+    top: 63.41267%;
+    left: 77.52141%;
+}
+
+
+/* 18 */
+.star-18 {
+    top: 98.55100%;
+    left: 47.16883%;
+}
+
+
+/* 19 */
+.star-19 {
+    top: 51.83100%;
+    left: 44.21225%;
+}
+
+
+/* 20 */
+.star-20 {
+    top: 48.00900%;
+    left: 33.24333%;
+}
+
+
+/* 21 */
+.star-21 {
+    top: 41.84541%;
+    left: 70.93333%;
+}
+
+
+/* 22 */
+.star-22 {
+    top: 89.48591%;
+    left: 28.22983%;
+}
+
+
+/* =========================================================
+   PUNTOS DE LAS ESTRELLAS
+   ========================================================= */
+
+.star-dot {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.constellation-star:hover .star-dot {
+    background-color: var(--color-accent);
+
+    transform: scale(1.35);
+}
+
+
+/* =========================================================
+   PREVISUALIZACIÓN DEL PROYECTO
+   ========================================================= */
+
+.project-preview {
+    position: absolute;
+
+    left: 50%;
+    bottom: calc(100% + 18px);
+
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translate(-50%, 8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 20;
+}
+
+.project-preview-title {
+    display: block;
+
+    margin-top: 10px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    letter-spacing: 0.09em;
+
+    color: var(--color-text);
+
+    text-align: center;
+}
+
+.constellation-star:hover .project-preview,
+.constellation-star:focus-visible .project-preview {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translate(-50%, 0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .main-menu {
+        gap: 24px;
+    }
+
+    .menu-item > a,
+    .submenu a {
+        font-size: 15px;
+    }
+
+    .home-main {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .constellation-placeholder {
+        width: min(75vw, 750px);
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        min-height: auto;
+
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .main-navigation {
+        width: 100%;
+    }
+
+    .main-menu {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .submenu {
+        position: static;
+
+        min-width: 0;
+
+        padding: 5px 0 10px 20px;
+
+        visibility: visible;
+        opacity: 1;
+
+        transform: none;
+
+        display: none;
+    }
+
+    .menu-item:hover > .submenu,
+    .menu-item:focus-within > .submenu {
+        display: block;
+    }
+
+    .home-main {
+        padding: 30px 6vw 70px;
+    }
+
+    .constellation-placeholder {
+        width: 90vw;
+    }
+
+    .project-preview {
+        width: 180px;
+    }
+}
+/* MINIATURAS DE LOS ENLACES DEL LOGOTIPO */
+
+.logo-project-link {
+    position: relative;
+}
+
+.logo-project-thumbnail {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 24px);
+    width: 240px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-50%) translateX(8px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 100;
+}
+
+.logo-project-link:hover .logo-project-thumbnail,
+.logo-project-link:focus-visible .logo-project-thumbnail {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Evita que la miniatura se salga de la pantalla en dispositivos pequeños */
+@media (max-width: 700px) {
+    .logo-project-thumbnail {
+        display: none;
+    }
+}
+/* IMAGEN DE PREVISUALIZACIÓN DE LOS PROYECTOS */
+
+.project-preview-image {
+    display: block;
+    width: 180px;
+    height: 135px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/* PIE DE CONTACTO */
+
+.site-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 18px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #18181B;
+
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.footer-separator {
+    color: #FF751F;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-email {
+    position: relative;
+}
+
+.footer-email > a {
+    color: #18181B;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-email > a:hover {
+    color: #FF751F;
+}
+
+.email-options {
+    font-size: 11px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    padding: 10px 14px;
+    background: #F5F5F5;
+    border: 0px solid rgba(24, 24, 27, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.footer-email:hover .email-options,
+.footer-email:focus-within .email-options {
+    opacity: 1;
+    visibility: visible;
+}
+
+.email-options a {
+    color: #18181B;
+    text-decoration: none;
+}
+
+.email-options a:hover {
+    color: #FF751F;
+}

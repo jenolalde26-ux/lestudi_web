@@ -747,3 +747,113 @@ body {
 .email-options a:hover {
     color: #FF751F;
 }
+
+/* ========================================
+   PÀGINES DE PROJECTE
+======================================== */
+
+.project-content {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* TÍTOL DEL PROJECTE */
+
+.project-title {
+    color: #FF751F;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin: 45px 0 30px;
+}
+
+/* VÍDEO */
+
+.project-video {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto 55px;
+}
+
+.project-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #000;
+}
+
+/* TEXT DEL PROJECTE */
+
+.project-description {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    color: #18181B;
+}
+
+.project-description p {
+    margin: 0 0 28px;
+}
+
+.project-description strong {
+    font-weight: 700;
+}
+
+/* LLISTA D'ACTUACIONS */
+
+.project-actions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-actions li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 18px;
+}
+
+.project-actions li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: #FF751F;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* ADAPTACIÓ A MÒBILS */
+
+@media (max-width: 700px) {
+
+    .project-content {
+        padding: 0 18px;
+    }
+
+    .project-title {
+        font-size: 22px;
+        margin: 30px 0 22px;
+    }
+
+    .project-video {
+        margin-bottom: 35px;
+    }
+
+    .project-description {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+}

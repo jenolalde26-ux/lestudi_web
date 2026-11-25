@@ -122,7 +122,8 @@ body {
     position: relative;
 }
 
-.menu-item > a {
+.menu-item > a,
+.menu-item > .menu-label {
     display: block;
 
     padding: 10px 0;

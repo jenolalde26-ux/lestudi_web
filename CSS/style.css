@@ -865,12 +865,15 @@ body {
 .works-page {
     width: 100%;
     max-width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 65vh;
+    margin: 0 auto;
+    padding: 30px 35px;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 75px;
 }
 

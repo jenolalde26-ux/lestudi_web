@@ -899,10 +899,12 @@ body {
 /* TÍTOL I LLISTA */
 
 .works-list {
-    flex: 0 1 380px;
+    flex: 0 0 auto;
+    width: max-content;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .works-title {

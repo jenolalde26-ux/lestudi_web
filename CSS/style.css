@@ -873,6 +873,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 75px;
 }
 
@@ -924,7 +925,7 @@ body {
 
 .works-links a {
     font-family: 'Raleway', sans-serif;
-    color: #FF751F;
+    color: #18181B;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -935,7 +936,7 @@ body {
 }
 
 .works-links a:hover {
-    color: #18181B;
+    color: #FF751F;
     font-size: 17px;
 }
 

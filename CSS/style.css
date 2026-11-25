@@ -1227,3 +1227,138 @@ body {
         text-align: left;
     }
 }
+
+/* ========================================
+   PÀGINA MITJANS
+======================================== */
+
+.media-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 35px 50px;
+    box-sizing: border-box;
+}
+
+/* VÍDEO */
+
+.media-video {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 55px;
+}
+
+.media-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* TÍTOL */
+
+.media-title {
+    font-family: 'Raleway', sans-serif;
+    color: #FF751F;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin: 0 0 35px;
+}
+
+/* LLISTAT DE NOTÍCIES */
+
+.media-news {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.media-news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.media-news-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 9px;
+    row-gap: 4px;
+
+    font-family: 'Raleway', sans-serif;
+    color: #18181B;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* DATA */
+
+.media-news-item time {
+    font-size: 11px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* FONT */
+
+.media-news-item strong {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* SEPARADORS */
+
+.media-separator {
+    color: #FF751F;
+    font-weight: 600;
+}
+
+/* ENLLAÇOS */
+
+.media-news-item a {
+    color: #18181B;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.media-news-item a:hover {
+    color: #FF751F;
+}
+
+/* ADAPTACIÓ A MÒBILS */
+
+@media (max-width: 750px) {
+
+    .media-page {
+        padding: 25px 20px 35px;
+    }
+
+    .media-video {
+        margin-bottom: 40px;
+    }
+
+    .media-title {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+
+    .media-news-list {
+        gap: 16px;
+    }
+
+    .media-news-item {
+        column-gap: 7px;
+        font-size: 11px;
+    }
+
+    .media-news-item strong,
+    .media-news-item a {
+        font-size: 11px;
+    }
+}

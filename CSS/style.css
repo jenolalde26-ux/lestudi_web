@@ -1120,3 +1120,110 @@ body {
         text-align: center;
     }
 }
+
+/* ========================================
+   PÀGINA L'ESTUDI
+======================================== */
+
+.estudi-page {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 65vh;
+    margin: 0 auto;
+    padding: 30px 35px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+}
+
+/* IMATGE */
+
+.estudi-image {
+    flex: 0 0 320px;
+    width: 320px;
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estudi-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CONTINGUT */
+
+.estudi-content {
+    flex: 0 1 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* TÍTOL */
+
+.estudi-title {
+    font-family: 'Raleway', sans-serif;
+    color: #FF751F;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 25px;
+}
+
+/* TEXT */
+
+.estudi-description {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: #18181B;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.estudi-description p {
+    margin: 0 0 16px;
+}
+
+/* ADAPTACIÓ A MÒBILS */
+
+@media (max-width: 750px) {
+
+    .estudi-page {
+        min-height: auto;
+        flex-direction: column;
+        gap: 30px;
+        padding: 35px 20px;
+    }
+
+    .estudi-image {
+        flex: none;
+        width: min(260px, 80vw);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .estudi-content {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+        align-items: center;
+    }
+
+    .estudi-title {
+        text-align: center;
+    }
+
+    .estudi-description {
+        text-align: left;
+    }
+}

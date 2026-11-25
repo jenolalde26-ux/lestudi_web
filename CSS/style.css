@@ -857,3 +857,110 @@ body {
     }
 
 }
+
+/* ========================================
+   PÀGINA OBRES
+======================================== */
+
+.works-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 35px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+/* IMATGE */
+
+.works-image {
+    flex: 0 0 500px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* TÍTOL I LLISTA */
+
+.works-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.works-title {
+    font-family: 'Raleway', sans-serif;
+    color: #FF751F;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 35px;
+}
+
+/* ENLLAÇOS */
+
+.works-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.works-links a {
+    font-family: 'Raleway', sans-serif;
+    color: #FF751F;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        font-size 0.2s ease,
+        color 0.2s ease;
+}
+
+.works-links a:hover {
+    color: #18181B;
+    font-size: 17px;
+}
+
+/* ADAPTACIÓ A MÒBILS */
+
+@media (max-width: 850px) {
+
+    .works-page {
+        flex-direction: column;
+        gap: 35px;
+        margin: 45px auto;
+    }
+
+    .works-image {
+        flex: none;
+        width: min(100%, 500px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .works-list {
+        align-items: center;
+        text-align: center;
+    }
+
+    .works-links {
+        align-items: center;
+    }
+
+}

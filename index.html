@@ -480,20 +480,5 @@
         </span>
     </span>
 </footer>
-<script>
-document.querySelectorAll('.menu-item > button[aria-expanded]').forEach(button => {
-    button.addEventListener('click', () => {
-        const isOpen = button.getAttribute('aria-expanded') === 'true';
-
-        button.setAttribute('aria-expanded', String(!isOpen));
-
-        const submenu = button.parentElement.querySelector('.submenu');
-
-        if (submenu) {
-            submenu.hidden = isOpen;
-        }
-    });
-});
-</script>
 </body>
 </html>

@@ -606,10 +606,22 @@ body {
         display: none;
     }
 
+/* Apertura mediante ratón en escritorio */
+@media (hover: hover) and (min-width: 751px) {
     .menu-item:hover > .submenu,
     .menu-item:focus-within > .submenu {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Apertura y cierre mediante la flecha */
+.menu-item.is-open > .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
 
     .home-main {
         padding: 30px 6vw 70px;

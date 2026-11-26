@@ -616,13 +616,19 @@ body {
     }
 }
 
-/* Apertura y cierre mediante la flecha */
+/* Apertura mediante la flecha en móvil */
 .menu-item.is-open > .submenu {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Cierre explícito cuando se pulsa de nuevo la flecha */
+.menu-item:not(.is-open) > .submenu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+}
     .home-main {
         padding: 30px 6vw 70px;
     }

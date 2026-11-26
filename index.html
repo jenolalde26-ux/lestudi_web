@@ -29,7 +29,7 @@
             <ul class="main-menu">
 
                 <li class="menu-item">
-                    <a href="PAGES/obres.html">OBRES</a><button type="button" aria-expanded="false" aria-label="Obrir o tancar el submenú">▾</button>
+                    <a href="PAGES/obres.html">OBRES</a>
 
                     <ul class="submenu">
                         <li><a href="PAGES/montserrat.html">Montserrat</a></li>
@@ -42,7 +42,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="PAGES/administracio-publica.html">ADMINISTRACIÓ</a><button type="button" aria-expanded="false" aria-label="Obrir o tancar el submenú">▾</button>
+                    <a href="PAGES/administracio-publica.html">ADMINISTRACIÓ</a>
 
                     <ul class="submenu">
                         <li><a href="PAGES/placa-simeo-selga.html">Plaça Simeó Selga</a></li>
@@ -55,7 +55,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="PAGES/projectes.html">PROJECTES</a><button type="button" aria-expanded="false" aria-label="Obrir o tancar el submenú">▾</button>
+                    <a href="PAGES/projectes.html">PROJECTES</a>
 
                     <ul class="submenu">
                         <li><a href="PAGES/montalegre.html">Montalegre</a></li>
@@ -480,15 +480,5 @@
         </span>
     </span>
 </footer>
-<script>
-document.querySelectorAll('.menu-item > button[aria-expanded]').forEach(button => {
-    button.addEventListener('click', () => {
-        const menuItem = button.closest('.menu-item');
-        const isOpen = menuItem.classList.toggle('is-open');
-
-        button.setAttribute('aria-expanded', String(isOpen));
-    });
-});
-</script>
 </body>
 </html>
